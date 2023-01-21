@@ -1,0 +1,79 @@
+:root {
+  --body-color: darkred;
+  --font-color: white;
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--font-color);
+  background: white;
+}
+
+@media (max-width: 90em) {
+  body {
+    background: red;
+  }
+}
+
+@media (max-width: 65em) {
+  body {
+    background: cyan;
+  }
+}
+
+@media (max-width: 40em) {
+  body {
+    background: green;
+  }
+}
+
+form {
+  --font-color:#333;
+  background-color: white;
+  color: var(--font-color);
+}
+
+#contactform {
+  background-color: white;
+}
+
+#contactform input, #contactform textarea {
+  background-color: white;
+  flex: 2;
+}
+
+@media (min-width: 40em) {
+  #contactform {
+    width: 90%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+fieldset > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+fieldset > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+#content {
+  width: 90%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}

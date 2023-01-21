@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap');
+$body-font: 'Lora', serif; 
+$heading-font: Helvetica, Arial, sans-serif;
+$border-grey: 1px solid #d0d0d0;
+*{
+    box-sizing: border-box;
+}
+@mixin align{
+    text-align: center;
+}
+body{
+    font-family: $heading-font;
+    color: #333;
+}
+h1,h2{
+    font-family:$body-font;
+
+}
+h1 a{
+    text-decoration: none;
+    color: #333;
+
+}
+h1{
+    font-size: 60px;
+}
+header h1{
+    @include align;
+}
+nav{
+    border: $border-grey;
+    border-right-width: 0;
+    border-left-width: 0;
+    ul{
+        font-family: $body-font;
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        @include align;
+        list-style: none;
+    
+        a{
+            text-transform: uppercase; 
+        }
+        a, h2 a, p a{
+            color: #666;
+            text-decoration: none;
+        }
+        a:active, h2 a:active, p a:active{
+            color: #DEB887;
+        }
+        a:hover, h2 a:hover, p a:hover{
+            color: #00ddff ;
+        }
+    }
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+}
+.post-date{
+    color: #333;
+    font-size: 30px;
+    border-bottom: $border-grey;
+    padding: 50px 10px 0 30px;
+    text-align: right;
+    text-transform: uppercase; 
+
+}
+
+figure{
+    margin: auto;
+    display: block;
+    @include align;
+}
+h2,p{
+    @include align;
+}
+
+
+
+@media only screen and (min-width: 700px) {
+    article{
+        flex-direction: row;
+    }
+    .post-date{
+        border-bottom: none;
+        border-right: $border-grey;
+        width: 25vw;
+    }
+    .post-content{
+        width: 75vw;
+        border-bottom: $border-grey;
+    }
+
+  }
